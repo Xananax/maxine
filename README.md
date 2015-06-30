@@ -50,6 +50,8 @@ clone the repo, then create a directory './lib' in the root of the repo.
 - build: `npm run compile` to transpile the ES6 files in './src' to ES5 files in './lib'
 - publish: `npm run dist` to test, build, and generate test specs files. This is run automatically before publishing to npm.
 
+*Note to npm users: tests run on the ES6 version so they're not available when you install through npm*
+
 
 
 ---

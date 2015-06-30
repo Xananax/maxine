@@ -5,9 +5,39 @@
     "testWatch": "mocha --watch -R spec --compilers js:babel/register",
     "spec": "mocha ./test/mixin.js -R markdown --compilers js:babel/register > specs.md",
     "examples": "mocha ./test/kitchenSink.js -R markdown --compilers js:babel/register > examples.md",
-    "compile": "./node_modules/.bin/babel ./src --source-maps --out-dir ./lib",
+    "compile": "babel ./src --source-maps --out-dir ./lib",
     "dist": "npm run test && npm run spec && npm run examples && npm run compile",
-    "prepublish":"npm run dist"
+    "prepublish": "npm run dist"
   },
-  "author": "xananax@yelostudio.com"
+  "author": "xananax@yelostudio.com",
+  "name": "maxine",
+  "description": "Mix'n'match methods. Call them traits, mixins, whatever you want. Discuss inheritance vs composition vs prototypal vs your mom until the end of times, or don't. This system works for me, hope it works for you.",
+  "version": "0.1.0",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "babel": "^5.6.14",
+    "babel-core": "^5.6.15",
+    "chai": "^3.0.0",
+    "node-babel": "^0.1.2",
+    "node-libs-browser": "^0.5.2",
+    "mocha": "^2.2.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xananax/maxine.git"
+  },
+  "keywords": [
+    "mixin",
+    "mixins"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Xananax/maxine/issues"
+  },
+  "homepage": "https://github.com/Xananax/maxine#readme"
 }
