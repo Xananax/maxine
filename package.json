@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "babel-node": "babel-node",
+    "test": "mocha -R spec --compilers js:babel/register",
+    "testWatch": "mocha --watch -R spec --compilers js:babel/register",
+    "spec": "mocha ./test/mixin.js -R markdown --compilers js:babel/register > specs.md",
+    "examples": "mocha ./test/kitchenSink.js -R markdown --compilers js:babel/register > examples.md",
+    "compile": "./node_modules/.bin/babel ./src --source-maps --out-dir ./lib",
+    "dist": "npm run test && npm run spec && npm run examples && npm run compile",
+    "prepublish":"npm run dist"
+  },
+  "author": "xananax@yelostudio.com"
+}
